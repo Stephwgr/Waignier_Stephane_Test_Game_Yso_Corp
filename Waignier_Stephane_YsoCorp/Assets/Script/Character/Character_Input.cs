@@ -9,6 +9,11 @@ public class Character_Input : MonoBehaviour
     public Vector2 _startPos;
     public Vector2 _endPos;
 
+    
+    public int _numPosition;
+
+    public float _speedSwipe;
+
     private void Start()
     {
         
@@ -41,12 +46,40 @@ public class Character_Input : MonoBehaviour
 
     public void Left()
     {
-        _player.transform.position = new Vector3(_player.transform.position.x - 1, _player.transform.position.y, _player.transform.position.z);
+        //_player.transform.position = new Vector3(_player.transform.position.x - 1 * _speedSwipe * Time.deltaTime, _player.transform.position.y, _player.transform.position.z);
+        PrivousPosition();
     }
 
     public void Right()
     {
-        _player.transform.position = new Vector3(_player.transform.position.x + 1, _player.transform.position.y, _player.transform.position.z);
+        //_player.transform.position = new Vector3(_player.transform.position.x + 1 * _speedSwipe * Time.deltaTime, _player.transform.position.y, _player.transform.position.z);
+        NextPosition();
+    }
+
+    public void NextPosition()
+    {
+        
+        //_player = PointPosition[_numPosition];
+        if (_numPosition > -2)
+        {
+            _numPosition--;
+            _player.transform.position = new Vector3(_player.transform.position.x + 2, _player.transform.position.y, _player.transform.position.z);
+
+        }
+
+    }
+
+    public void PrivousPosition()
+    {
+
+        if (_numPosition < 2)
+        {
+            _numPosition++;
+            _player.transform.position = new Vector3(_player.transform.position.x - 2, _player.transform.position.y, _player.transform.position.z);
+
+        }
+
+
     }
 
 

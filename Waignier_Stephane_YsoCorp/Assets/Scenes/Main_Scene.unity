@@ -423,7 +423,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 141346920}
-  - component: {fileID: 141346922}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -448,21 +447,6 @@ Transform:
   m_Father: {fileID: 1323823296}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &141346922
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 141346919}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 390d5e53a18736c4f9d5ef265ad181e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _player: {fileID: 1323823295}
-  _startPos: {x: 0, y: 0}
-  _endPos: {x: 15, y: 0}
 --- !u!1 &189430852
 GameObject:
   m_ObjectHideFlags: 0
@@ -553,8 +537,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 189430852}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 194.61}
-  m_LocalScale: {x: 8, y: 0.13503, z: 395.26}
+  m_LocalPosition: {x: -0, y: -9.9743, z: 195.2162}
+  m_LocalScale: {x: 9, y: 20.051937, z: 394.0623}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2020873941}
@@ -1900,7 +1884,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 104
+  m_Constraints: 114
   m_CollisionDetection: 0
 --- !u!114 &1323823298
 MonoBehaviour:
@@ -1916,7 +1900,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _player: {fileID: 1323823295}
   _startPos: {x: 0, y: 0}
-  _endPos: {x: -100, y: 0}
+  _endPos: {x: 0, y: 0}
+  _numPosition: 0
+  _speedSwipe: 50
 --- !u!114 &1323823299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1929,7 +1915,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a03b3bff93269449b0c526bab9d2333, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 10
+  _speed: 20
 --- !u!1 &1435643009
 GameObject:
   m_ObjectHideFlags: 0
@@ -2572,6 +2558,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 672181079509943788}
+  - component: {fileID: 672181079509943789}
   m_Layer: 0
   m_Name: Stickman_heads_sphere
   m_TagString: Untagged
@@ -3334,6 +3321,26 @@ Transform:
   m_Father: {fileID: 141346920}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &672181079509943789
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 672181079509719438}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: fa7f36c71b9e8fa4798df3a931c2fd92, type: 3}
+  m_Controller: {fileID: 9100000, guid: 08e890e54a984ef499cd15e157d774d6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &672181079509943790
 Transform:
   m_ObjectHideFlags: 0
