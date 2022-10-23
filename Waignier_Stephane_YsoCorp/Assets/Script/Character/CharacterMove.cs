@@ -23,7 +23,7 @@ public class CharacterMove : MonoBehaviour
     private void Move()
     {
         //transform.position += new Vector3(0, 0, _speed * Time.deltaTime);
-        _rb.velocity = new Vector3(0,0,20);
+        _rb.velocity = new Vector3(0,0,15);
     }
 
     

@@ -4,19 +4,26 @@ using UnityEngine;
 
 public class Character_Input : MonoBehaviour
 {
-    public GameObject _player;
+    [Header("Script reference")]
+    public TrailMeshEffect _trailMeshEffect;
 
-    public Vector2 _startPos;
-    public Vector2 _endPos;
+    public GameObject _player;
+    private Rigidbody _rb;
+
+    private Vector2 _startPos;
+    private Vector2 _endPos;
 
     
     public int _numPosition;
-
     public float _speedSwipe;
+
+    
+
 
     private void Start()
     {
         
+        _rb = GetComponent<Rigidbody>();
     }
 
     private void Update()
@@ -48,12 +55,20 @@ public class Character_Input : MonoBehaviour
     {
         //_player.transform.position = new Vector3(_player.transform.position.x - 1 * _speedSwipe * Time.deltaTime, _player.transform.position.y, _player.transform.position.z);
         PrivousPosition();
+        //_rb.velocity = new Vector3(-2, 0, 0);
+
+        _trailMeshEffect.AfterImage();
     }
 
     public void Right()
     {
         //_player.transform.position = new Vector3(_player.transform.position.x + 1 * _speedSwipe * Time.deltaTime, _player.transform.position.y, _player.transform.position.z);
         NextPosition();
+        //_rb.velocity = new Vector3(2, 0, 0);
+
+        _trailMeshEffect.AfterImage();
+
+
     }
 
     public void NextPosition()

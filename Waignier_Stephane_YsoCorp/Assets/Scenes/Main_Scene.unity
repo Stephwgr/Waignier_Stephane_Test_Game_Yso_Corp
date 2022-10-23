@@ -442,8 +442,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 672181079509943788}
   - {fileID: 963194228}
+  - {fileID: 672181079509943788}
   m_Father: {fileID: 1323823296}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -571,7 +571,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 190321518}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 20.8}
+  m_LocalPosition: {x: -2, y: 0.5, z: 20.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1148,14 +1148,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.065596804, y: -0, z: -0, w: 0.99784625}
-  m_LocalPosition: {x: 0, y: 3.93, z: -5.31}
+  m_LocalRotation: {x: 0.14310089, y: -0, z: -0, w: 0.9897081}
+  m_LocalPosition: {x: 0, y: 4.56, z: -6.32}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 141346920}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 7.522, y: 0, z: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 16.455, y: 0, z: 0}
 --- !u!1 &1110952511
 GameObject:
   m_ObjectHideFlags: 0
@@ -1884,7 +1884,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 114
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &1323823298
 MonoBehaviour:
@@ -1898,9 +1898,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 390d5e53a18736c4f9d5ef265ad181e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _trailMeshEffect: {fileID: 672181079509943791}
   _player: {fileID: 1323823295}
-  _startPos: {x: 0, y: 0}
-  _endPos: {x: 0, y: 0}
   _numPosition: 0
   _speedSwipe: 50
 --- !u!114 &1323823299
@@ -2559,6 +2558,7 @@ GameObject:
   m_Component:
   - component: {fileID: 672181079509943788}
   - component: {fileID: 672181079509943789}
+  - component: {fileID: 672181079509943791}
   m_Layer: 0
   m_Name: Stickman_heads_sphere
   m_TagString: Untagged
@@ -3319,7 +3319,7 @@ Transform:
   - {fileID: 672181079509943780}
   - {fileID: 672181079509943790}
   m_Father: {fileID: 141346920}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &672181079509943789
 Animator:
@@ -3348,7 +3348,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 672181079509719436}
-  m_LocalRotation: {x: -6.123234e-17, y: 1, z: 6.123234e-17, w: -3.7493994e-33}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3356,6 +3356,23 @@ Transform:
   m_Father: {fileID: 672181079509943788}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &672181079509943791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 672181079509719438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a07932630dbe3924aac4d4242bd89468, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _timeActivate: 0.15
+  meshRefreshRate: 0.1
+  _posSpawn: {fileID: 1323823296}
+  meshDestroyDelay: 2
+  color: {fileID: 2100000, guid: 3e9d2e1d4077236479877e74f8993ced, type: 2}
 --- !u!4 &672181079509943792
 Transform:
   m_ObjectHideFlags: 0
