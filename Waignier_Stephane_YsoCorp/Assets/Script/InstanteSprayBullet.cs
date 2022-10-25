@@ -13,11 +13,21 @@ public class InstanteSprayBullet : MonoBehaviour
 
     public bool isShooting;
 
+    [Header("Rotation Bullet")]
+    public Vector3 startRotation;
+
 
 
     private void Start()
     {
         isShooting = false;
+
+        transform.eulerAngles = startRotation;
+
+    }
+    private void Update()
+    {
+
     }
 
     public void InstanceSpray()
