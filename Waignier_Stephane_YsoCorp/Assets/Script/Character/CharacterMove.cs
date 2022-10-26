@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class CharacterMove : MonoBehaviour
 {
-    public float _speed;
+    //public float _speed;
 
     private Rigidbody _rb;
+
+    private void Awake()
+    {
+        Time.timeScale = 1;
+    }
 
     private void Start()
     {

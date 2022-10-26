@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 
 
-public class CountRing : MonoBehaviour
+public class CountRing1 : MonoBehaviour
 {
     public int _ringCount;
     public int _ringFinishLevel;
@@ -40,11 +40,11 @@ public class CountRing : MonoBehaviour
         }
     }
 
-    public void NexLevel()
+    public void Quit()
     {
         //SceneManager.LoadScene("");
-        Debug.Log("Level Suivant");
-        SceneManager.LoadScene("Main_Scene 1");
+        Debug.Log("Quitter");
+        Application.Quit();
     }
 
 
