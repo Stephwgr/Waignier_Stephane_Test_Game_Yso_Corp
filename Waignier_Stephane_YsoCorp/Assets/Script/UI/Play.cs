@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class Play : MonoBehaviour
 {
@@ -25,7 +27,7 @@ public class Play : MonoBehaviour
 
     private void Awake()
     {
-        Time.timeScale = 0;
+        
 
         _charactereInput.enabled = false;
         _charactereMove.enabled = false;
@@ -69,7 +71,7 @@ public class Play : MonoBehaviour
         _shootButtonLeft.SetActive(false);
 
 
-        Time.timeScale = 1;
+        
 
         _charactereInput.enabled = true;
         _charactereMove.enabled = true;
@@ -86,9 +88,14 @@ public class Play : MonoBehaviour
         _shootButtonLeft.SetActive(true);
 
 
-        Time.timeScale = 1;
+        
 
         _charactereInput.enabled = true;
         _charactereMove.enabled = true;
+    }
+
+    public void PlayGame()
+    {
+        SceneManager.LoadScene("Main_Scene");
     }
 }
