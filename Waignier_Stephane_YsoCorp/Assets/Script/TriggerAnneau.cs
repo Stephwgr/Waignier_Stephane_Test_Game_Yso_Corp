@@ -25,7 +25,7 @@ public class TriggerAnneau : MonoBehaviour
         {
             _countRing.AddRing(1);
             //Debug.Log("trigger");
-            //this.gameObject.SetActive(false);
+            this.gameObject.SetActive(false);
 
             //_resetRing = false;
 

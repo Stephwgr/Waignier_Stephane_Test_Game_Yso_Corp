@@ -12,6 +12,16 @@ public class AnimRotateSpray : MonoBehaviour
         transform.Rotate(_rotateSpray * _speed * Time.deltaTime);
     }
 
+    public void OnCollisionEnter(Collision col)
+    {
+        if (col.gameObject.name == "Ground")
+        {
+            Debug.Log("test collision bullet");
+
+            Destroy(this.gameObject);
+        }
+    }
+
 
 
 }
