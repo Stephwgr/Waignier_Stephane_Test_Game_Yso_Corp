@@ -47,9 +47,9 @@ public class InstanteSprayBullet : MonoBehaviour
         var spray = Instantiate(sprayPrebab, spraySpawnPoint.position, spraySpawnPoint.rotation);
         spray.GetComponent<Rigidbody>().velocity = spraySpawnPoint.forward * _speedSpray;
 
-        Debug.Log("Courutine commence");
+        //Debug.Log("Courutine commence");
         yield return new WaitForSeconds(_timeBtwShots);
-        Debug.Log("Courutine fini");
+        //Debug.Log("Courutine fini");
 
         isShooting = false;
 

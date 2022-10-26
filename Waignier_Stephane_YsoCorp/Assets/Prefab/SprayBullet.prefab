@@ -94,11 +94,11 @@ GameObject:
   - component: {fileID: 4621611770256972434}
   - component: {fileID: 8591913856576980408}
   - component: {fileID: 6685564144006632128}
-  - component: {fileID: 5453935060492049027}
   - component: {fileID: 5200256603833111658}
+  - component: {fileID: 865374465516641736}
   m_Layer: 0
   m_Name: SprayBullet
-  m_TagString: Untagged
+  m_TagString: Spray
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -150,20 +150,6 @@ CapsuleCollider:
   m_Height: 0.124366514
   m_Direction: 1
   m_Center: {x: 0, y: 0.0479408, z: 0}
---- !u!114 &5453935060492049027
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4621611770256791616}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 260bc53e2d3af054aae387b4a48f7a7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _speed: 150
-  _rotation: {x: 1, y: 1, z: 1}
 --- !u!96 &5200256603833111658
 TrailRenderer:
   serializedVersion: 2
@@ -272,6 +258,20 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
+--- !u!114 &865374465516641736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4621611770256791616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ed27395455c75a43898a09422b05644, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 250
+  _rotateSpray: {x: 2, y: 2, z: 2}
 --- !u!1 &4621611770256794646
 GameObject:
   m_ObjectHideFlags: 0
